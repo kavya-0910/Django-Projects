@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Home</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f2f2f2;
+        }
+
+        .container{
+            width:800px;
+            margin:50px auto;
+            background:#fff;
+            border:3px solid royalblue;
+            padding:20px;
+            text-align:center;
+        }
+
+        h1{
+            color:red;
+            margin-bottom:20px;
+        }
+
+        nav{
+            margin-bottom:30px;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:blue;
+            font-size:24px;
+            font-weight:bold;
+            margin:0 20px;
+        }
+
+        nav a:hover{
+            color:red;
+        }
+
+        h2{
+            color:purple;
+            margin:30px 0;
+        }
+
+        .menu{
+            margin-top:40px;
+        }
+
+        .menu a{
+            text-decoration:none;
+            color:blue;
+            font-size:24px;
+            font-weight:bold;
+            margin:0 25px;
+        }
+
+        .menu a:hover{
+            color:red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>EMPLOYEE MANAGEMENT SYSTEM</h1>
+   <nav>
+        <hr>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <a href="{% url 'register' %}">Register</a>
+        <a href="{% url 'login' %}">Login</a>
+    </nav>
+
+    <h2>Welcome To Employee Home Page</h2>
+
+    <div class="menu">
+        <a href="{% url 'search' %}">Show Details</a>
+        <a href="{% url 'update' %}">Update</a>
+        <a href="{% url 'delete' %}">Delete</a>
+    </div>
+
+</div>
+
+</body>
+</html>
